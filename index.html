@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>MapLibre Camera Tool</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="MapLibre Camera Properties Tool with Ordnance Survey Data">
+        <meta name="keywords" content="MapLibre, Ordnance Survey, OS">
+        <meta name="author" content="https://github.com/abiddiscombe-os">
+        <link rel="stylesheet" href="assets/master.css">
+        <link href='https://unpkg.com/maplibre-gl@2.2.0-pre.2/dist/maplibre-gl.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.css" />
+    </head>
+    <body>
+        <aside>
+            <div>
+                <h1>MapLibre GL JS Camera Positioning Tool</h1>
+                <p>This app allows you to fetch the positioning parameters for the active camera angle within MapLibre GL JS. You can use this code snippet to create 3D views for your own MapLibre GL JS web application.</p>
+            </div>
+            <div class="withborder">
+                <h2>📸 Camera Parameters</h2>
+                <p>The parameters below will update automatically as you interact with the map.</p>
+                <div class="codeblock">
+                    <code>
+                        center: [<span id="js-value-center">-2.9622, 54.4283</span>],<br>
+                        zoom: <span id="js-value-zoom">15.16</span>,<br>
+                        bearing: <span id="js-value-bearing">17.00</span>,<br>
+                        pitch: <span id="js-value-pitch">77.00</span>,<br>
+                        padding: [<span id="js-value-padding">0, 0, 0, 0</span>],<br>
+                        // additional parameters<br>
+                        maxPitch: 85,<br>
+                        minZoom: 6,<br>
+                        maxZoom: 18,<br>
+                    </code>
+                </div>
+                <p>Copy and paste this snippet into your MapLibre instance. The <a href="https://maplibre.org/maplibre-gl-js-docs/api/">MapLibre documentation</a> will also help you get started.</p>
+            </div>
+            <div id="js-hillshade" class="withborder hidden">
+                <h2>🌄 Enhanced 3D (Experimental)</h2>
+                <p>Click the button below to enable the OS Terrain 50 RGB tile overlay, with hillshading.</p>
+                <b>This feature is experimental and might break.</b>
+                <div class="codeblock">
+                    <button onclick="enableTerrainOverlay()">Enable Terrain Overlay</button>
+                </div>
+            </div>
+        </aside>
+        <main>            
+            <div id="splash">
+                <div>
+                    <h2>Choose Map Style</h2>
+                    <p>This app is designed to work with the OS Data Hub Vector Tile API. Please provide a valid API key below.</p>
+                    <div class="inputBox">
+                        <input type="text" id="js-input-key" name="js-input-key" placeholder="Enter your API key here...">
+                        <button onclick="generateMap('os')">Connect</button>
+                    </div>
+                    <p>Alternatively, you can use the default MapLibre GL JS basemap, but this is not designed for use in this app.</p>
+                    <div class="inputBox">
+                        <button onclick="generateMap('standard')">Use Default</button>
+                    </div>
+                    <br>
+                    <br>
+                    <small><a href="https://github.com/abiddiscombe-os">@abiddiscombe-os</a></small>
+                </div>
+            </div>
+            <div id="map" style="height: 100%;">
+                <noscript>
+                    <h2>Please enable JavaScript.</h2>
+                    <p>JavaScript is required to run this app.</p>
+                </noscript>
+            </div>
+        </main>
+    </body>
+    <script src='https://unpkg.com/maplibre-gl@2.2.0-pre.2/dist/maplibre-gl.js'></script>
+    <script src='assets/master.js'></script>
+    <script src="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.js"></script>
+</html>
