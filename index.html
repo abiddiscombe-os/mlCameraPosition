@@ -15,11 +15,11 @@
         <aside>
             <div>
                 <h1>MapLibre GL JS Camera Positioning Tool</h1>
-                <p>This app allows you to fetch the positioning parameters for the active camera angle within MapLibre GL JS. You can use this code snippet to create 3D views for your own MapLibre GL JS web application.</p>
+                <p>Helps you fetch the positioning data of the camera for use in your own MapLibre projects.</p>
             </div>
-            <div class="withborder">
-                <h2>📸 Camera Parameters</h2>
-                <p>The parameters below will update automatically as you interact with the map.</p>
+            <div>
+                <h2>Camera Parameters</h2>
+                <p>The numbers below will update as you drag, pan, or zoom on the map.</p>
                 <div class="codeblock">
                     <code>
                         center: [<span id="js-value-center">-2.9622, 54.4283</span>],<br>
@@ -30,44 +30,36 @@
                         // additional parameters<br>
                         maxPitch: 85,<br>
                         minZoom: 6,<br>
-                        maxZoom: 18,<br>
+                        maxZoom: 16,<br>
                     </code>
                 </div>
-                <p>Copy and paste this snippet into your MapLibre instance. The <a href="https://maplibre.org/maplibre-gl-js-docs/api/">MapLibre documentation</a> will also help you get started.</p>
+                <p>You can copy the code snippet above directly into your MapLibre map configuration.</p>
+                <a href="https://maplibre.org/maplibre-gl-js-docs/" target="_blank" class="fakebutton">📚 Read the MapLibre Docs</a>
             </div>
-            <div id="js-hillshade" class="withborder hidden">
-                <h2>🌄 Enhanced 3D (Experimental)</h2>
-                <p>Click the button below to enable the OS Terrain 50 RGB tile overlay, with hillshading.</p>
-                <b>This feature is experimental and might break.</b>
-                <div class="codeblock">
-                    <button onclick="enableTerrainOverlay()">Enable Terrain Overlay</button>
-                </div>
+            <div>
+                <h2>About</h2>
+                <p>This tool uses Ordnance Survey's Open Zoomstack and Terrain 50 data, which you can download and use for free.</p>
+                <a href="https://maplibre.org/maplibre-gl-js-docs/" target="_blank" class="fakebutton">📌 Visit the OS Data Hub</a>
+            </div>
+            <div>
+                <small>Made by <a href="https://github.com/abiddiscombe-os" target="_blank">@abiddiscombe-os</a>. <a href="https://github.com/abiddiscombe-os/mlCameraPosition" target="_blank">View source.</a></small>
             </div>
         </aside>
-        <main>            
-            <div id="splash">
+        <main>
+            <section id="container-nomobile">
                 <div>
-                    <h2>Choose Map Style</h2>
-                    <p>This app is designed to work with the OS Data Hub Vector Tile API. Please provide a valid API key below.</p>
-                    <div class="inputBox">
-                        <input type="text" id="js-input-key" name="js-input-key" placeholder="Enter your API key here...">
-                        <button onclick="generateMap('os')">Connect</button>
-                    </div>
-                    <p>Alternatively, you can use the default MapLibre GL JS basemap, but this is not designed for use in this app.</p>
-                    <div class="inputBox">
-                        <button onclick="generateMap('standard')">Use Default</button>
-                    </div>
-                    <br>
-                    <br>
-                    <small><a href="https://github.com/abiddiscombe-os">@abiddiscombe-os</a></small>
+                    <h1>Sorry, this app won't work on mobile devices.</h1>
+                    <p>Please try opening this application on a desktop PC.</p>
                 </div>
-            </div>
-            <div id="map" style="height: 100%;">
-                <noscript>
-                    <h2>Please enable JavaScript.</h2>
-                    <p>JavaScript is required to run this app.</p>
-                </noscript>
-            </div>
+            </section>
+            <section id="container-map">
+                <div id="map" style="height: 100%;">
+                    <noscript>
+                        <h2>Please enable JavaScript.</h2>
+                        <p>JavaScript is required to run this app.</p>
+                    </noscript>
+                </div>
+            </section>
         </main>
     </body>
     <script src='https://unpkg.com/maplibre-gl@2.2.0-pre.2/dist/maplibre-gl.js'></script>
