@@ -9,7 +9,7 @@
 /* font */
 h1, h2, p, b, ul, li, small { margin: 0px; font-family: 'Source Sans Pro', sans-serif; }
 h1    { padding: 0px 0px 8px 0px; font-size: 1.6em; font-weight: 600; }
-h2    { padding: 6px 0px 6px 0px; font-size: 1.2em; font-weight: 600; }
+h2    { padding: 0px 0px 6px 0px; font-size: 1.2em; font-weight: 600; }
 p     { padding: 0px 0px 0px 0px; font-size: 1.0em; font-weight: 400; }
 b     { padding: 0px 0px 0px 0px; font-size: 1.0em; font-weight: 600; }
 ul    { padding: 4px 0px 0px 0px; font-size: 1.0em; font-weight: 400; }
@@ -29,15 +29,19 @@ body {
 body > aside {
     padding: 10px;
     margin: 0;
-    width: 340px;
+    width: 380px;
     background: #fafafa;
     color: #3d3d3d;
     border-right: 1px solid rgb(233, 233, 233);
+    overflow: scroll;
+    overflow-x: hidden;
+    direction: rtl;
 }
 
 body > aside > div {
-    padding: 10px 10px 0px 10px;
+    padding: 6px 10px 0px 10px;
     margin: 0;
+    direction: ltr;
 }
 
 body > main {
@@ -108,12 +112,12 @@ body > main > section#container-map {
 
 a.fakebutton {
     font-family: 'Source Sans Pro', sans-serif;
-    padding: 8px 16px;
-    margin: 8px 0;
-    background: #e9e7ff;
+    padding: 7px 16px;
+    margin: 10px 0;
+    background: #e3e1f3;
     color: #363636;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     text-decoration: none;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: inline-block;
