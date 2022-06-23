@@ -20,6 +20,7 @@ map = new maplibregl.Map({
     bearing: 15.51,
     pitch: 77.08,
     padding: [0, 0, 0, 0],
+    
     // additional parameters
     maxPitch: 85,
     minZoom: 6,

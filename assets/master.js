@@ -1,13 +1,13 @@
 map = new maplibregl.Map({
     container: 'map',
     style: 'https://labs.os.uk/tiles/styles/open-zoomstack-outdoor/style.json',
+    // params: required
     center: [-2.9638, 54.4329],
     zoom: 15.42,
     bearing: 15.51,
-    pitch: 77.08,
+    pitch: 60,
     padding: [0, 0, 0, 0],
-    // additional parameters
-    maxPitch: 85,
+    // params: optional
     minZoom: 6,
     maxZoom: 18,
     transformRequest: url => {

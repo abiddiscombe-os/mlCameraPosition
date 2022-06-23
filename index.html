@@ -16,33 +16,37 @@
             <div>
                 <h1>MapLibre GL JS Camera Positioning Tool</h1>
                 <p>Helps you fetch the positioning data of the camera for use in your own MapLibre projects.</p>
+                <a href="https://maplibre.org/maplibre-gl-js-docs/" target="_blank" class="fakebutton">📚 Read the MapLibre Docs</a>
             </div>
             <div>
                 <h2>Camera Parameters</h2>
-                <p>The numbers below will update as you drag, pan, or zoom on the map.</p>
+                <p>The numbers below will update as you interact with the map. Copy the code snippet into your app to replicate the current view.</p>
                 <div class="codeblock">
                     <code>
                         center: [<span id="js-value-center">-2.9622, 54.4283</span>],<br>
                         zoom: <span id="js-value-zoom">15.16</span>,<br>
                         bearing: <span id="js-value-bearing">17.00</span>,<br>
                         pitch: <span id="js-value-pitch">77.00</span>,<br>
-                        padding: [<span id="js-value-padding">0, 0, 0, 0</span>],<br>
-                        // additional parameters<br>
-                        maxPitch: 85,<br>
-                        minZoom: 6,<br>
-                        maxZoom: 16,<br>
+                        padding: [<span id="js-value-padding">0, 0, 0, 0</span>],
                     </code>
                 </div>
-                <p>You can copy the code snippet above directly into your MapLibre map configuration.</p>
-                <a href="https://maplibre.org/maplibre-gl-js-docs/" target="_blank" class="fakebutton">📚 Read the MapLibre Docs</a>
+                <p>You may also wish to specify the following optional parameters:</p>
+                <div class="codeblock">
+                    <code>
+                        maxPitch: 85, // experimental!<br>
+                        minZoom: 6,<br>
+                        maxZoom: 16,
+                    </code>
+                </div>
             </div>
             <div>
                 <h2>About</h2>
                 <p>This tool uses Ordnance Survey's Open Zoomstack and Terrain 50 data, which you can download and use for free.</p>
-                <a href="https://maplibre.org/maplibre-gl-js-docs/" target="_blank" class="fakebutton">📌 Visit the OS Data Hub</a>
+                <a href="https://osdatahub.os.uk/downloads/open" target="_blank" class="fakebutton">📌 Visit the OS Data Hub</a>
             </div>
             <div>
-                <small>Made by <a href="https://github.com/abiddiscombe-os" target="_blank">@abiddiscombe-os</a>. <a href="https://github.com/abiddiscombe-os/mlCameraPosition" target="_blank">View source.</a></small>
+                <small>Made by <a href="https://github.com/abiddiscombe-os/mlCameraPosition" target="_blank">@abiddiscombe-os</a>.</small><br>
+                <small>Experimental! Some things might break.</small>
             </div>
         </aside>
         <main>
