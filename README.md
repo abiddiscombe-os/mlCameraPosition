@@ -7,9 +7,9 @@ A handy tool to help you fetch the positioning data of the camera for use in you
 ## What is it?
 In short, it's a simple MapLibre GL JS web map, that uses Ordnance Survey datasets (Open Zoomstack, Terrain 50) with the new terrain features of MapLibre 2.2 to provide information on the 3D parameters of the active scene.
 
-![User Interface Screenshot](docs/screenshot.jpeg)
-
 If you're working on a 3D map, you'll know the challenges of trying to set the center point, bearing, and pitch of the camera (what the user sees) for the initial load of the map. I've made this tool to help simplify this process, just copy and paste the code snippet into your map to replicate the viewshed.
+
+![User Interface Screenshot](screenshot.jpeg)
 
 ## Example
 

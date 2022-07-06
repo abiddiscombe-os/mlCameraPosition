@@ -10,6 +10,10 @@ map = new maplibregl.Map({
     // params: optional
     minZoom: 6,
     maxZoom: 18,
+    maxBounds: [
+        [-7.5571598, 49.7668072],
+        [3.6320186, 61.4645894]
+    ],
     transformRequest: url => {
         if (url.indexOf('labs') === -1) {
             return { url: url + '&srs=3857' }
